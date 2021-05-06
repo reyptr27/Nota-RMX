@@ -1,0 +1,121 @@
+@media only screen and (max-width: 1024px) {
+  .produk .tabel1 {
+    width: 77%;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .produk .tabel2 {
+    width: 23%;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .total {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .produk .tabel1 {
+    width: 75%;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .produk .tabel2 {
+    width: 25%;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .produk-header {
+    font-size: 12px;
+  }
+
+  .produk-body {
+    font-size: 12px;
+  }
+
+  .total {
+    font-size: 12px;
+  }
+
+  .konfirmasi {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .produk .tabel1 {
+    width: 75%;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .produk .tabel2 {
+    width: 25%;
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .produk-header {
+    font-size: 10px;
+  }
+
+  .produk-body {
+    font-size: 10px;
+  }
+
+  .total {
+    font-size: 10px;
+  }
+
+  .konfirmasi {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .produk .tabel1 {
+    width: 75%;
+    font-size: 8px;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .produk .tabel2 {
+    width: 25%;
+    font-size: 8px;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  .produk-header {
+    font-size: 8px;
+  }
+
+  .produk-body {
+    font-size: 8px;
+  }
+
+  .total {
+    font-size: 8px;
+  }
+
+  .konfirmasi {
+    font-size: 8px;
+  }
+}

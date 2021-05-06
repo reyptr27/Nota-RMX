@@ -1,0 +1,104 @@
+html,
+body,
+header {
+    height: 100%;
+    width: 100%;
+}
+
+.product-header {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.tabel1 {
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.tabel2 {
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.form-link {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {
+    float:none;
+    margin-bottom: 20px;
+}
+
+.card {
+    border-color: #16334f;
+}
+
+.card-header{
+    color: #c0995c;
+    background-color:#16334f!important;
+}
+
+.btn-primary {
+    color: #16334f!important;
+    background-color: #fff;
+    border-color: #16334f; /*set the color you want here*/
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #c0995c!important;
+    background-color: #16334f;
+    border-color:#16334f; /*set the color you want here*/
+}
+
+
+.check{
+    fill:none;
+    stroke: rgb(27, 76, 168);
+    stroke-width: 2px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+}
+  
+.check {
+    stroke-dasharray: 60 200;
+    animation-delay: 1.7s;
+    animation: check 2s cubic-bezier(0.67, 0, 0.1, 1) forwards 0.0s; 
+    opacity: 0;
+}
+
+
+@-webkit-keyframes check {
+    from {stroke-dashoffset: 60;
+opacity: 1;}
+
+    to {stroke-dashoffset: 293;
+    opacity: 1;}
+}
+
+
+.thankyou{
+    display: block;
+    width: 100%;
+}
+
+h2{
+    margin-bottom: 10px;
+}
+p{
+    margin-bottom: 30px;
+}
+
+.smaller {
+    width: 130px;
+    margin: 20px auto -50px auto;
+}
+

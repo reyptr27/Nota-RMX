@@ -5,8 +5,8 @@
 @section('content')
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
-    <a class="navbar-brand" href="https://dnevensurabaya.com">
-    <img src="/img/logo.png" width="160" height="65" alt="">
+    <a class="navbar-brand" href="https://rotimox.com/paket-hari-raya">
+    <img src="/img/logo.png" width="130" height="65" alt="">
     </a>
   </div>
 </nav>
@@ -30,11 +30,11 @@
                         </div>  
 
                         <h2 style="text-align: center; font-weight: 500; margin-top: 50px;">Order Berhasil!</h2>
-                        <p style="text-align: center;">Pesanan anda sedang diproses, Terimakasih telah berbelanja di D'NEVEN Bakehouse 😀
+                        <p style="text-align: center;">Pesanan anda sedang diproses, Terimakasih telah berbelanja di Roti MOX 😀
                         </p>
 
                             <div class="row justify-content-center">
-                                <a href="{{ url('https://dnevensurabaya.com') }}" class="btn btn-primary mr-3 konfirmasi">Home Page</a>
+                                <a href="{{ url('https://rotimox.com/paket-hari-raya') }}" class="btn btn-primary mr-3 konfirmasi">Home Page</a>
                             </div>
                         </div>
                     </div>

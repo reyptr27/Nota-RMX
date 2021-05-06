@@ -6,8 +6,8 @@
 <header>
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="https://dnevensurabaya.com">
-                <img src="/img/logo.png" width="165" height="65" alt="">
+            <a class="navbar-brand" href="https://rotimox.com/paket-hari-raya">
+                <img src="/img/logo.png" width="130" height="65" alt="">
             </a>
         </div>
     </nav>

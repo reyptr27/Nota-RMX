@@ -10,39 +10,39 @@
     <form action="{{ route('store') }}" method="POST">
         @csrf
         <div class="form-group">
-            <label for="spg" @error('spg')
+            <label for="spg" class="tag" @error('spg')
                 class="text-danger"
             @enderror>SPG @error('spg')
                 | {{ $message }}
             @enderror</label>
-            <input type="text" id="spg" name="spg" class="form-control">
+            <input type="text" id="spg" name="spg" class="form-control spg">
         </div>
 
         <div class="form-group">
-            <label for="nama" @error('nama')
+            <label for="nama" class="tag" @error('nama')
                 class="text-danger"
             @enderror>Nama Pemesan @error('nama')
                 | {{$message}}
             @enderror</label>
-            <input type="text" id="nama" name="nama" class="form-control">
+            <input type="text" id="nama" name="nama" class="form-control nama">
         </div>
 
         <div class="form-group">
-            <label for="hp" @error('hp')
+            <label for="hp" class="tag" @error('hp')
                 class="text-danger"
             @enderror>No. Handphone @error('hp')
                 | {{$message}}
             @enderror</label>
-            <input type="text" id="hp" name="hp" class="form-control">
+            <input type="text" id="hp" name="hp" class="form-control hp">
         </div>
 
         <div class="form-group">
-            <label for="alamat" @error('alamat')
+            <label for="alamat" class="tag" @error('alamat')
                 class="text-danger"
             @enderror>Alamat Pengiriman @error('alamat')
                 | {{$message}}
             @enderror</label>
-            <input type="text" id="alamat" name="alamat" class="form-control">    
+            <input type="text" id="alamat" name="alamat" class="form-control alamat">    
         </div>
 
         <div class="card">
@@ -72,7 +72,7 @@
                             <td>
                                 <select name="orderProducts[{{$index}}][product_id]"
                                         wire:model="orderProducts.{{$index}}.product_id"
-                                        class="form-control">
+                                        class="form-control produk">
                                     <option value="">-- pilih produk --</option>
                                     @foreach ($allProducts as $product)
                                         <option value="{{ $product->id }}">
@@ -84,7 +84,7 @@
                             <td>
                                 <input type="number"
                                        name="orderProducts[{{$index}}][quantity]"
-                                       class="form-control"
+                                       class="form-control kuantitas"
                                        wire:model="orderProducts.{{$index}}.quantity" />
                             </td>
                             <td>
@@ -105,7 +105,7 @@
         </div>
         <br>
         <div>
-            <input class="btn btn-primary" type="submit" value="Simpan">
+            <input class="btn btn-primary float-right" type="submit" value="Simpan">
         </div>
     </form>
     {{--<script>

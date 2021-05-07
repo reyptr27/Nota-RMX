@@ -103,6 +103,17 @@
                 </div>
             </div>
         </div>
+
+        <br>
+        <div class="form-group">
+            <label for="ongkir" @error('ongkir')
+                class="text-danger"
+            @enderror>Ongkos Kirim @error('ongkir')
+                | {{ $message }}
+            @enderror</label>
+            <input type="number" id="ongkir" name="ongkir" class="form-control ongkir">
+        </div>
+
         <br>
         <div>
             <input class="btn btn-primary float-right" type="submit" value="Simpan">

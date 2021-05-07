@@ -18,6 +18,7 @@ class Order extends Model
         'nama',
         'hp',
         'alamat',
+        'ongkir',
     ];
 
     public function products()

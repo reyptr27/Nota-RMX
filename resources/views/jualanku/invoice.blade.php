@@ -61,12 +61,16 @@
                                             <td>Rp. {{ str_replace(',', '.', number_format($item->harga)) }}</td>
                                         </tr>
                                         @endforeach
+                                        <tr>
+                                            <th scope="row">Ongkir</th>
+                                            <td>Rp. {{ str_replace(',', '.', number_format($object->ongkir)) }}</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
 
                             <div class="col-md-2 tabel2">
-                                <table class="table">
+                                <table class="table" style="border-bottom: solid #e0e4e8 1px;">
                                     <thead>
                                         <tr class="table-light">
                                             <th scope="col">Kuantitas</th>
@@ -91,7 +95,7 @@
                                         
                                         <tr>
                                             <th scope="col">Total harga</th>
-                                            <td>Rp. {{ str_replace(',', '.', number_format($totalsum)) }}</td>
+                                            <td>Rp. {{ str_replace(',', '.', number_format($totalfix)) }}</td>
                                         </tr>
                                         
                                     </thead>
@@ -115,6 +119,6 @@
 
 @section('extra-js')
 <script>
-    fbq('track', 'Purchase', {currency: "IDR", value: {{ $totalsum }}});
+    fbq('track', 'Purchase', {currency: "IDR", value: {{ $totalfix }}});
 </script>
 @endsection

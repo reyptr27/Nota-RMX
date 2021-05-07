@@ -44,19 +44,18 @@ class OrderController extends Controller
         //dd($request);
 
         $request->validate([
-            'spg' => 'required|alpha|min:3|max:30',
-            'nama' => 'required|alpha|min:3|max:30',
+            'spg' => 'required|min:3|max:30',
+            'nama' => 'required|min:3|max:30',
             'hp' => 'required|numeric|digits_between:10,15',
             'alamat' => 'required|max:255|min:3',
+            'ongkir' => 'required|numeric|digits_between:4,6',
             'orderProducts.*.product_id' => 'required|numeric',
             'orderProducts.*.quantity' => 'required|numeric|min:1'
         ], [
             'spg.required' => 'Harus diisi !',
-            'spg.alpha' => 'Harus diisi dengan alfabet!',
             'spg.min' => 'Minimal 3 karakter !',
             'spg.max' => 'Maximal 30 karakter !',
             'nama.required' => 'Harus diisi !',
-            'nama.alpha' => 'Harus diisi dengan alfabet!',
             'nama.min' => 'Minimal 3 karakter !',
             'nama.max' => 'Maximal 30 karakter !',
             'hp.required' => 'Harus diisi !',
@@ -65,6 +64,9 @@ class OrderController extends Controller
             'alamat.required' => 'Harus diisi !',
             'alamat.min' => 'Minimal 3 karakter !',
             'alamat.max' => 'Maximal 255 karakter !',
+            'ongkir.required' => 'Harus diisi !',
+            'ongkir.numeric' => 'Harus diisi dengan angka !',
+            'ongkir.digits_between' => 'Minimal 4 digit & maximal 6 digit !',
             'orderProducts.*.product_id.required' => 'Tentukan produk yang dipesan !',
             'orderProducts.*.quantity.required' => 'Tentukan kuantitas !',
             'orderProducts.*.quantity.numeric' => 'Harus bernilai angka !',
@@ -81,6 +83,7 @@ class OrderController extends Controller
             'nama' => $request->nama,
             'hp' => $request->hp,
             'alamat' => $request->alamat,
+            'ongkir' => $request->ongkir,
         ]);  
 
         foreach ($request->orderProducts as $product) {
@@ -138,15 +141,24 @@ class OrderController extends Controller
         $harga = $pesanan->pluck('harga')->toArray(); 
         //ambil jumlah produk untuk ditotal
         $jumlah = $qty->toArray();
+        //ambil harga ongkir untuk ditotal
+        $hargaongkir = $data->pluck('ongkir')->toArray(); 
+        $ongkir = implode($hargaongkir);
+        $intongkir = (int)$ongkir;
+        //dd($intongkir);
       
         // $arr1 = [0 => 1, 1 => 2];
         // $arr2 = [0 => 100000, 1 => 90000];
         foreach ($harga as $k => $val) {
             $total[$k]=$val * $jumlah[$k];
         }
+        //harga total belum ongkir
         $totalsum=(array_sum($total));
+        //total plus ongkir
+        $totalfix = $totalsum + $intongkir;
+        //dd($totalfix);
 
-        return view('jualanku.invoice')->with('data', $data)->with('qty', $qty)->with('pesanan', $pesanan)->with('totalsum', $totalsum);
+        return view('jualanku.invoice')->with('data', $data)->with('qty', $qty)->with('pesanan', $pesanan)->with('totalfix', $totalfix);
     }
 
     /**
